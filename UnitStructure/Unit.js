@@ -7,9 +7,8 @@ module.exports = class Unit {
   }
 
   getStrength() {
-    let result;
     // formula here...
-    return result;
+    return `Total strength is ${this.magicalDamage + this.physicalDamage}`;
   }
   getStrengthComparedTo(enemy, unit) {
     let magicDamageWorth;

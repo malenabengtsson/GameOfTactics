@@ -10,9 +10,26 @@ const Unicorn = require('../UnitStructure/UnitClasses/Unicorn')
 const Witch = require('../UnitStructure/UnitClasses/Witch')
 
 module.exports = class UnitFactory {
-  
-  generateUnits() {
-    //give each creature its own number, and then randomize and push into array?
-    // Any other way to fix random units?
+  constructor(){
+    throw new Error("Static")
   }
+ 
+  static createUnits() {
+    let classes = [
+      Dwarf,
+      Human,
+      Lich,
+      Minotaur,
+      Orc,
+      Pixie,
+      Troglodyte,
+      Unicorn,
+      Witch
+    ]
+   
+    let random = Math.round(Math.random() * classes.length);
+    
+    return new classes[random];
+  }
+
 }

@@ -6,5 +6,5 @@ module.exports = class Human extends Unit {
   physicalDefence = 20;
   magicalDefence = 20;
   healthPoints = 110;
-
+  stars = 1;
 }

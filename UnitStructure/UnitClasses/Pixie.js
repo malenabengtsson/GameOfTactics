@@ -6,5 +6,6 @@ module.exports = class Pixie extends Unit {
   physicalDefence = 5;
   magicalDefence = 30;
   healthPoints = 90;
+  stars = 1;
 
 }

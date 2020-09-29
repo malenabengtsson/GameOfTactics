@@ -6,5 +6,5 @@ module.exports = class Minotaur extends Unit {
   physicalDefence = 20;
   magicalDefence = 5;
   healthPoints = 120;
-
+  stars = 1;
 }

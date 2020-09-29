@@ -6,5 +6,5 @@ module.exports = class Lich extends Unit {
   physicalDefence = 5;
   magicalDefence = 5;
   healthPoints = 100;
-
+  stars = 1;
 }

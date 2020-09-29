@@ -6,5 +6,5 @@ module.exports = class Dwarf extends Unit {
   physicalDefence = 30;
   magicalDefence = 10;
   healthPoints = 130;
-
+  stars = 1;
 }

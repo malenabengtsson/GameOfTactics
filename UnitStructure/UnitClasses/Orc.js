@@ -6,5 +6,5 @@ module.exports = class Orc extends Unit {
   physicalDefence = 20;
   magicalDefence = 5;
   healthPoints = 150;
-
+  stars = 1;
 }

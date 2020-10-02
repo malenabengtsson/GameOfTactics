@@ -1,4 +1,3 @@
-import Game from '../Game.js'
 import UnitList from './UnitList.js';
 export default class Player {
   unitList = new UnitList;
@@ -42,7 +41,7 @@ export default class Player {
     return array;
   }
 
-  removeSingleUnitFromArray(array, unitToRemove){
+  removeSingleUnitFromArray(array, unitToRemove) {
  let unitIndex  = array.indexOf(unitToRemove);
  if (unitIndex > -1){
    array.splice(unitIndex, 1)
@@ -55,9 +54,18 @@ export default class Player {
     console.log('Players gold ', this.gold);
   }
 
-  getGold() {
-    return this.gold;
+  attackBoss() {
+    
   }
+  render() {
+    return /*html*/ `
+    <div class="player-details">
+    <p>Your gold: ${this.gold}</p>
+    <p>Your units: ${this.unitList.map(unit => unit.constructor.name).join(', ')}</p>
+    </div>
+    `
+  }
+
 
 
 }

@@ -74,7 +74,8 @@ export default class Unit extends Base{
     <div class="unit"
     data-click="buyUnit"
     data-id="${this.id}">
-    <div>${this.constructor.name}</div>
+    <p>${this.constructor.name}</p>
+    <p>${this.cost} gold</p>
     </div>
     `
   }

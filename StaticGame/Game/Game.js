@@ -39,9 +39,11 @@ buyableUnits = [];
   
   unitToBeBought(unit) {
     let removeFromArray = this.player.buyUnit(unit);
-    // if (removeFromArray) {
-    //   this.player.removeSingleUnitFromArray(this.buyableUnits, unit)
-    // }
+    if (removeFromArray) {
+      console.log('Remove');
+      this.player.removeSingleUnitFromArray(this.buyableUnits, unit)
+      this.render();
+    }
 
     console.log(this.buyableUnits);
   }
@@ -49,8 +51,13 @@ buyableUnits = [];
   render() {
     document.body.innerHTML = /*html*/`
       <div class="game" data-id="${this.id}">
+      <div class="boss-details">
+      Boss healthpoints
+      <p class="boss-health">${this.boss.healthPoints}</p>
+      </div>
       <div>${this.buyableUnits.map(unit => unit.render()).join('')}</div>
-      <p>${this.player.gold}</p>
+      <div>${this.player.render()}</div>
+      <button>Attack</button>
       </div>
     `
   }

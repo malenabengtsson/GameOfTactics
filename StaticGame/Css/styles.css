@@ -1,0 +1,19 @@
+body{
+  box-sizing: border-box;
+  background-color: #ececec;
+  text-align: center;
+}
+
+.unit{
+  display: inline-block;
+  border: 2px solid red;
+  cursor: pointer;
+  width: 150px;
+  height: 150px;
+  background-color: #ffffff;
+}
+
+.boss-health{
+  margin-top: 0;
+  font-size: 2rem;
+}

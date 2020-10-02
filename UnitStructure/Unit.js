@@ -1,4 +1,4 @@
-module.exports = class Unit {
+export default class Unit {
   
   constructor() {
     if (this.constructor === Unit) {

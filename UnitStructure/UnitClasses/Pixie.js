@@ -1,5 +1,5 @@
-const Unit = require('../Unit')
-module.exports = class Pixie extends Unit {
+import Unit from '../Unit';
+export default class Pixie extends Unit {
 
   physicalDamage = 0;
   magicalDamage = 30;

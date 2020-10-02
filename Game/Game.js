@@ -1,7 +1,8 @@
-const Player = require('./GameComponents/Player')
-const Boss = require('../UnitStructure/UnitClasses/Boss')
-const UnitFactory = require('../Factory/UnitFactory')
-module.exports = class Game {
+import Player from './GameComponents/Player';
+import Boss from '../UnitStructure/UnitClasses/Boss';
+import { createUnits } from '../Factory/UnitFactory';
+
+export default class Game {
 buyableUnits = [];
  round = 0;
  player = new Player();
@@ -27,7 +28,7 @@ buyableUnits = [];
   this.round = this.round+1;
   console.log('Round ', this.round);
   for (let i = 0; i < 5; i++) {
-    this.buyableUnits.push(UnitFactory.createUnits()) 
+    this.buyableUnits.push(createUnits()) 
   }
   console.log('Units', this.buyableUnits);
   console.log('Boss', this.boss);

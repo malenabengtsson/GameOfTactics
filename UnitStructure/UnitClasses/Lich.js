@@ -1,5 +1,5 @@
-const Unit = require('../Unit')
-module.exports = class Lich extends Unit {
+import Unit from '../Unit';
+export default class Lich extends Unit {
 
   physicalDamage = 0;
   magicalDamage = 35;

@@ -1,5 +1,5 @@
-const Unit = require('../Unit')
-module.exports = class Dwarf extends Unit {
+import Unit from '../Unit';
+export default class Dwarf extends Unit {
 
   physicalDamage = 25;
   magicalDamage = 10;

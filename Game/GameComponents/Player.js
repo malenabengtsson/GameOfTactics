@@ -1,7 +1,7 @@
-const UnitList = require('./UnitList')
+import UnitList from './UnitList';
 let unitAction = document.querySelector("#buyableUnits")
 unitAction.onclick = buyUnit;
-module.exports = class Player {
+export default class Player {
   unitList = new UnitList;
   gold = 0;
 

@@ -1,5 +1,5 @@
-const Unit = require('../Unit')
-module.exports = class Boss extends Unit{
+import Unit from '../Unit'
+export default class Boss extends Unit{
 
   physicalDamage = Math.floor(Math.random() * 15) + 1
   magicalDamage = Math.floor(Math.random() * 15) + 1

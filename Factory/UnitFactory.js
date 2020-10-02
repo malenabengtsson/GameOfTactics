@@ -1,15 +1,15 @@
-const Dragon = require('../UnitStructure/UnitClasses/Dragon')
-const Dwarf = require('../UnitStructure/UnitClasses/Dwarf')
-const Human = require('../UnitStructure/UnitClasses/Human')
-const Lich = require('../UnitStructure/UnitClasses/Lich')
-const Minotaur = require('../UnitStructure/UnitClasses/Minotaur')
-const Orc = require('../UnitStructure/UnitClasses/Orc')
-const Pixie = require('../UnitStructure/UnitClasses/Pixie')
-const Troglodyte = require('../UnitStructure/UnitClasses/Troglodyte')
-const Unicorn = require('../UnitStructure/UnitClasses/Unicorn')
-const Witch = require('../UnitStructure/UnitClasses/Witch')
+import Dragon from '../UnitStructure/UnitClasses/Dragon'
+import Dwarf from '../UnitStructure/UnitClasses/Dwarf'
+import Human from '../UnitStructure/UnitClasses/Human'
+import Lich from '../UnitStructure/UnitClasses/Lich'
+import Minotaur from '../UnitStructure/UnitClasses/Minotaur'
+import Orc from '../UnitStructure/UnitClasses/Orc'
+import Pixie from '../UnitStructure/UnitClasses/Pixie'
+import Troglodyte from '../UnitStructure/UnitClasses/Troglodyte'
+import Unicorn from '../UnitStructure/UnitClasses/Unicorn'
+import Witch from '../UnitStructure/UnitClasses/Witch'
 
-module.exports = class UnitFactory {
+export default class UnitFactory {
   constructor(){
     throw new Error("Static")
   }
@@ -24,7 +24,8 @@ module.exports = class UnitFactory {
       Pixie,
       Troglodyte,
       Unicorn,
-      Witch
+      Witch,
+      Dragon
     ]
    
     let random = Math.round(Math.random() * classes.length);

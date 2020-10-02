@@ -1,5 +1,5 @@
-const Unit = require('../Unit')
-module.exports = class Minotaur extends Unit {
+import Unit from '../Unit';
+export default class Minotaur extends Unit {
 
   physicalDamage = 30;
   magicalDamage = 2;

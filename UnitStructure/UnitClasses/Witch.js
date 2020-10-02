@@ -1,5 +1,5 @@
-const Unit = require('../Unit')
-module.exports = class Witch extends Unit{
+import Unit from '../Unit';
+export default class Witch extends Unit{
 
   physicalDamage = 2;
   magicalDamage = 25;

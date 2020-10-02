@@ -1,5 +1,5 @@
-const Unit = require('../Unit')
-module.exports = class Troglodyte extends Unit {
+import Unit from '../Unit';
+export default class Troglodyte extends Unit {
 
   physicalDamage = 10;
   magicalDamage = 0;

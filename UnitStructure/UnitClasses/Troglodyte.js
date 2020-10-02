@@ -7,4 +7,5 @@ module.exports = class Troglodyte extends Unit {
   magicalDefence = 5;
   healthPoints = 150;
   stars = 1;
+  cost= 1;
 }

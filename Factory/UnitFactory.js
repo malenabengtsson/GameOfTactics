@@ -29,7 +29,7 @@ module.exports = class UnitFactory {
    
     let random = Math.round(Math.random() * classes.length);
     
-    return new classes[random];
+    return new classes[random]();
   }
 
 }

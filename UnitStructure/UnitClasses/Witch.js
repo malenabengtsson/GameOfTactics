@@ -7,4 +7,5 @@ module.exports = class Witch extends Unit{
   magicalDefence = 15;
   healthPoints = 100;
   stars = 1;
+  cost = 1;
 }

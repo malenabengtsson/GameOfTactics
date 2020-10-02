@@ -1,17 +1,22 @@
 const UnitList = require('./UnitList')
+let unitAction = document.querySelector("#buyableUnits")
+unitAction.onclick = buyUnit;
 module.exports = class Player {
   unitList = new UnitList;
-  gold;
+  gold = 0;
+
 
   buyUnit(unit){
-    UnitList.push();
-    this.shouldUnitUpgrade(unit)
+    console.log('In function');
+    if(this.gold >= unit.cost){
+      unitList.push(unit);
+      this.shouldUnitUpgrade(unitList, unit)
+      gold = (gold - unit.cost);
+    }
   }
 
   shouldUnitUpgrade(unitList, unit){
-     
     let howManyOfEachUnits = {};
-
     unitList.forEach((x) => {
       howManyOfEachUnits[x] = (howManyOfEachUnits[x] || 0) + 1;
     });
@@ -35,8 +40,19 @@ module.exports = class Player {
       }
     }
     return array;
+  }
 
+  removeSingleUnitFromArray(array, unitToRemove){
+ let unitIndex  = array.indexOf(unitToRemove);
+ if (unitIndex > -1){
+   array.splice(unitIndex, 1)
+ }
+ return array;
+  }
 
+  addGold(){
+    this.gold += 3;
+    console.log('Players gold ', this.gold);
   }
 
 

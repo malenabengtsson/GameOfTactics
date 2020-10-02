@@ -7,4 +7,6 @@ module.exports = class Human extends Unit {
   magicalDefence = 20;
   healthPoints = 110;
   stars = 1;
+  cost = 1;
+
 }

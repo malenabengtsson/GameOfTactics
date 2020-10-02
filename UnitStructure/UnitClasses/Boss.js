@@ -6,4 +6,8 @@ module.exports = class Boss extends Unit{
   physicalDefence = Math.floor(Math.random() * 25) + 1
   magicalDefence = Math.floor(Math.random() * 25) + 1
   healthPoints = 150;
+
+  getHealth(){
+    return this.healthPoints;
+  }
 }

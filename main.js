@@ -1,5 +1,8 @@
-const Player = require('./Game/GameComponents/Player')
+const Game = require('./Game/Game');
+module.exports = class Main {
+  game = new Game();
 
-player = new Player();
-
-player.shouldUnitUpgrade();
+  constructor(){
+    game.start();
+  }
+}

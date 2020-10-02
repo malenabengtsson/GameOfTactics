@@ -7,5 +7,6 @@ module.exports = class Dragon extends Unit {
   magicalDefence = 30;
   healthPoints = 180;
   stars = 1;
+  cost = 3;
 
 }

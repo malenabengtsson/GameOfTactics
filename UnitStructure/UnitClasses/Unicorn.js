@@ -7,4 +7,6 @@ module.exports = class Unicorn extends Unit {
   magicalDefence = 15;
   healthPoints = 150;
   stars = 1;
+  cost = 2;
+
 }

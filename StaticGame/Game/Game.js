@@ -32,20 +32,26 @@ buyableUnits = [];
   newRound(){
   this.player.addGold();
   this.round = this.round+1;
+  this.buyableUnits = [];
   for (let i = 0; i < 5; i++) {
     this.buyableUnits.push(UnitFactory.createUnits()) 
   }
+  this.render();
   }
   
   unitToBeBought(unit) {
     let removeFromArray = this.player.buyUnit(unit);
     if (removeFromArray) {
-      console.log('Remove');
       this.player.removeSingleUnitFromArray(this.buyableUnits, unit)
       this.render();
     }
+  }
 
-    console.log(this.buyableUnits);
+  attack(){
+    let damage = this.player.attackBoss(this.boss)
+    this.boss.healthPoints = this.boss.healthPoints - damage;
+    this.render();
+    this.newRound();
   }
 
   render() {
@@ -55,9 +61,10 @@ buyableUnits = [];
       Boss healthpoints
       <p class="boss-health">${this.boss.healthPoints}</p>
       </div>
+      <p class="buyable-units">Buyable units</p>
       <div>${this.buyableUnits.map(unit => unit.render()).join('')}</div>
       <div>${this.player.render()}</div>
-      <button>Attack</button>
+      <button data-click="attack">Attack</button>
       </div>
     `
   }

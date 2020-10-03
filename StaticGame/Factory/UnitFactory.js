@@ -28,7 +28,7 @@ export default class UnitFactory {
       Dragon
     ]
    
-    let random = Math.round(Math.random() * classes.length-1);
+    let random = Math.floor(Math.random() * classes.length);
     return new classes[random]();
   }
 

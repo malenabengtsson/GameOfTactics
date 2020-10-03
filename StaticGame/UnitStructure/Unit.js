@@ -52,7 +52,7 @@ export default class Unit extends Base{
     //   }
       
     // }
-
+(totalStrengthComparedToBoss);
     return totalStrengthComparedToBoss;
   }
   
@@ -63,10 +63,10 @@ export default class Unit extends Base{
     else if (unit.stars === 2) {
       unit.stars === 3
     }
+    return unit;
   }
 
   buyUnit() {
-    console.log('in buy unit');
     window.currentGame.unitToBeBought(this);
   }
   render() {
@@ -75,6 +75,7 @@ export default class Unit extends Base{
     data-click="buyUnit"
     data-id="${this.id}">
     <p>${this.constructor.name}</p>
+    <p>${this.stars} star</p>
     <p>${this.cost} gold</p>
     </div>
     `

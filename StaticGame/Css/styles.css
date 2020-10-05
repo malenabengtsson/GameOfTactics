@@ -10,7 +10,7 @@ body{
   cursor: pointer;
   width: 150px;
   height: 150px;
-  background-color: #ffffff;
+  background-color: #ffffff;  
 }
 
 .boss-health{
@@ -18,6 +18,12 @@ body{
   font-size: 2rem;
 }
 
-.buyable-units{
-  
+.bigger-title{
+  font-size: 1.5rem;
+
+}
+
+.gold{
+  font-size: 1.2rem
+    ;
 }

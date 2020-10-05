@@ -15,25 +15,33 @@ export default class Player {
     }
   }
 
-  shouldUnitUpgrade(unitList, unit){
+  async shouldUnitUpgrade(unitList, unit){
+ let unitName = unit.constructor.name;
     let howManyOfEachUnits = {};
-
     unitList.forEach((x) => {
       howManyOfEachUnits[x.constructor.name] = (howManyOfEachUnits[x.constructor.name] || 0) + 1;
     });   
 
-    let unitName = this.getUnitName(howManyOfEachUnits, unit)
+    let amountOfUnits = this.getAmountOfUnits(howManyOfEachUnits, unit)
 
-   if (unitName === 3 && unit.stars === 1){
-     unitList = this.removeUnitsFromArray(unitList, unit)
-     let upgradedUnit = unit.upgradeUnit(unit);
-     unitList.push(upgradedUnit);
-     alert(`Your ${unit.constructor.name} got upgraded to ${unit.stars} stars and is now stronger!`)
+   if (amountOfUnits >= 3){
+     let counter = 0;
+     unitList.forEach( (unit) => {
+        if (unit.constructor.name == unitName && unit.stars === 1){
+          counter += 1;
+        }
+     })
+     if(counter === 3){
+       unitList = this.removeUnitsFromArray(unitList, unit)
+       let upgradedUnit = unit.upgradeUnit(unit);
+       unitList.push(upgradedUnit);
+       alert(`Your ${unit.constructor.name} got upgraded to ${unit.stars} stars and is now stronger!`)
+     }
     
    }
   }
 
-  getUnitName(howManyOfEachUnit, unit){
+  getAmountOfUnits(howManyOfEachUnit, unit){
 if(unit.constructor.name === "Dragon"){
   return howManyOfEachUnit.Dragon;
 }
@@ -70,7 +78,7 @@ else if (unit.constructor.name === "Witch"){
   removeUnitsFromArray(array, unitToRemove){
     let i = 0;
     while (i < array.length) {
-      if (array[i].constructor.name === unitToRemove.constructor.name) {
+      if (array[i].constructor.name === unitToRemove.constructor.name && array[i].stars === 1) {
         array.splice(i, 1);
       } else {
         ++i;
@@ -101,9 +109,9 @@ else if (unit.constructor.name === "Witch"){
   }
   render() {
     return /*html*/ `
-    <div class="player-details">
-    <p>Your gold: ${this.gold}</p>
-    <p>Your units: ${this.unitList.map(unit => unit.render()).join(', ')}</p>
+    <div>
+    <p class="gold">Your gold: ${this.gold} 💰</p>
+    <p class="bigger-title">Your units: ${this.unitList.map(unit => unit.render()).join(', ')}</p>
     </div>
     `
   }

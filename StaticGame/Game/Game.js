@@ -54,14 +54,15 @@ buyableUnits = [];
     this.newRound();
   }
 
+
   render() {
     document.body.innerHTML = /*html*/`
       <div class="game" data-id="${this.id}">
       <div class="boss-details">
       Boss healthpoints
-      <p class="boss-health">${this.boss.healthPoints}</p>
+      <p class="boss-health">${this.boss.healthPoints} ${this.boss.healthPoints > 50 ? '💗' : '💔'}</p>
       </div>
-      <p class="buyable-units">Buyable units</p>
+      <p class="bigger-title">Buyable units</p>
       <div>${this.buyableUnits.map(unit => unit.render()).join('')}</div>
       <div>${this.player.render()}</div>
       <button data-click="attack">Attack</button>

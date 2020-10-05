@@ -9,7 +9,6 @@ export default class Unit extends Base{
   }
 
   getStrength() {
-    // formula here...
     return `Total strength is ${this.magicalDamage + this.physicalDamage}`;
   }
   getStrengthComparedTo(enemy, unit) {
@@ -52,7 +51,6 @@ export default class Unit extends Base{
     //   }
       
     // }
-(totalStrengthComparedToBoss);
     return totalStrengthComparedToBoss;
   }
   

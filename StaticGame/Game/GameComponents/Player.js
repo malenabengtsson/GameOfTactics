@@ -33,7 +33,7 @@ export default class Player {
      })
      if(counter === 3){
        unitList = this.removeUnitsFromArray(unitList, unit)
-       let upgradedUnit = unit.upgradeUnit(unit);
+       let upgradedUnit = unit.upgradeUnit(unit);       
        unitList.push(upgradedUnit);
        alert(`Your ${unit.constructor.name} got upgraded to ${unit.stars} stars and is now stronger!`)
      }
@@ -111,7 +111,7 @@ else if (unit.constructor.name === "Witch"){
     return /*html*/ `
     <div>
     <p class="gold">Your gold: ${this.gold} 💰</p>
-    <p class="bigger-title">Your units: ${this.unitList.map(unit => unit.render()).join(', ')}</p>
+    <p class="bigger-title">Your units: ${this.unitList.map(unit => unit.render()).join('')}</p>
     </div>
     `
   }

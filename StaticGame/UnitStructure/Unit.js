@@ -51,16 +51,29 @@ export default class Unit extends Base{
     //   }
       
     // }
-    return totalStrengthComparedToBoss;
+    return Math.floor(totalStrengthComparedToBoss);
   }
   
   upgradeUnit(unit) {
     if (unit.stars === 1) {
       unit.stars = 2;
+      unit.physicalDamage = unit.physicalDamage * 4.5
+      unit.physicalDamage = unit.physicalDamage * 4.5
+      unit.magicalDamage = unit.magicalDamage * 4.5
+      unit.physicalDefence = unit.physicalDefence * 4.5;
+      unit.magicalDefence = unit.magicalDefence * 4.5;
+      unit.healthPoints = unit.healthPoints * 4.5;
     }
     else if (unit.stars === 2) {
-      unit.stars === 3
+      unit.stars = 3
+      unit.physicalDamage = unit.physicalDamage * 6.5
+      unit.physicalDamage = unit.physicalDamage * 6.5
+      unit.magicalDamage = unit.magicalDamage * 6.5
+      unit.physicalDefence = unit.physicalDefence *6.5;
+      unit.magicalDefence = unit.magicalDefence * 6.5;
+      unit.healthPoints = unit.healthPoints * 6.5;
     }
+    console.log(unit);
     return unit;
   }
 

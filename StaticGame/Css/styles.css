@@ -10,7 +10,8 @@ body{
   cursor: pointer;
   width: 150px;
   height: 150px;
-  background-color: #ffffff;  
+  background-color: #ffffff;
+  margin-top: 10px;
 }
 
 .boss-health{
@@ -20,10 +21,10 @@ body{
 
 .bigger-title{
   font-size: 1.5rem;
+  margin-bottom: 2px;
 
 }
 
 .gold{
-  font-size: 1.2rem
-    ;
+  font-size: 1.2rem;
 }

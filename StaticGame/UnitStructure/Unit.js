@@ -9,8 +9,9 @@ export default class Unit extends Base{
   }
 
   getStrength() {
-    return `Total strength is ${this.magicalDamage + this.physicalDamage}`;
+    return this.magicalDamage + this.physicalDamage;
   }
+
   getStrengthComparedTo(enemy, unit) {
     let magicDamageWorth;
     let physicalDamageWorth;
@@ -30,27 +31,7 @@ export default class Unit extends Base{
     }
 
     totalStrengthComparedToBoss = magicDamageWorth + physicalDamageWorth;
-    // let chanceToGoFirst = 80;
-    // let chance = Math.random() * 100;
-    // let whoGoesFirst;
-    // if (enemy.getStrength > totalStrengthComparedToBoss) {
-    //   if (chance < chanceToGoFirst) {
-    //     whoGoesFirst = 'boss';
-    //   }
-    //   else {
-    //     whoGoesFirst = 'unit'
-    //   }
-      
-    // }
-    // else {
-    //   if (chance < chanceToGoFirst) {
-    //     whoGoesFirst = 'unit'
-    //   }
-    //   else {
-    //     whoGoesFirst = 'boss';
-    //   }
-      
-    // }
+   
     return Math.floor(totalStrengthComparedToBoss);
   }
   

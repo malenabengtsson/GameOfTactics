@@ -42,6 +42,8 @@ export default class Player {
     }
   }
 
+  //Funktionen nedan är för att returnera korrekt antal av den unit som skickas in,
+  //dvs, skickar man in 'Dragon' och det finns 5, returneras siffran 5.
   getAmountOfUnits(howManyOfEachUnit, unit) {
     if (unit.constructor.name === "Dragon") {
       return howManyOfEachUnit.Dragon;

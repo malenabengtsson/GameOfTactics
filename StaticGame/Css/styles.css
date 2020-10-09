@@ -4,6 +4,7 @@ body{
   text-align: center;
 }
 
+
 .unit{
   display: inline-block;
   border: 3px solid black;
@@ -12,6 +13,9 @@ body{
   height: 150px;
   background-color: #ffffff;
   margin-top: 10px;
+}
+.boss-details{
+  margin-top: 20px;
 }
 
 .boss-health{
@@ -27,4 +31,31 @@ body{
 
 .gold{
   font-size: 1.2rem;
+}
+
+.welcome{
+  margin-bottom: 50px;
+  margin-top: 30px;
+  font-style: italic;
+}
+
+.btn {
+  background-color: rgb(84, 145, 174); 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.unit-name{
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.unit-attribute{
+  margin: 1px;
 }

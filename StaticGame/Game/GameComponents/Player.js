@@ -105,9 +105,8 @@ export default class Player {
           totalDamageToBoss = unit.getStrengthComparedTo(boss, unit);
         });
       }
-      else{
+      else {
         alert('You lost. No units are alive to fight!');
-      
       }
     } else {
       console.log('Unit goes first ');

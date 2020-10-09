@@ -52,26 +52,44 @@ export default class Game extends Base {
 
   attack() {
     let damage = this.player.attackBoss(this.boss);
-    this.boss.healthPoints = this.boss.healthPoints - damage;
+    if (damage) {
+      this.boss.healthPoints = this.boss.healthPoints - damage;
+    }
+    else {
+      this.boss.healthPoints = 0;
+    }
     if (this.boss.healthPoints < 0) {
-      document.querySelector('#attack-btn').disabled = true;
+      this.boss.healthPoints = 0;
     }
     this.render();
     this.newRound();
+  }
+  attackButton() {
+    return (this.boss.healthPoints > 0 ? '<button data-click="attack" class="btn">Attack</button>' : '<p>Restart the page to play again!</p>')
+  }
+
+  rules() {
+    document.querySelector('#viewRules').innerHTML = `
+    <div class="welcome"> Welcome! <p>
+      Buy units by clicking on them.
+      </p> <span> Buying three of the same will upgrade the unit to a stronger one!
+      </span></div>
+    `
   }
 
   render() {
     document.body.innerHTML = /*html*/ `
       <div class="game" data-id="${this.id}">
+     <div id="viewRules"><button data-click="rules" class="btn">Rules</button></div>
       <div class="boss-details">
       Boss healthpoints
       <p class="boss-health">${this.boss.healthPoints} ${
-      this.boss.healthPoints > 50 ? "💗" : "💔"}</p>
+      this.boss.healthPoints > 1 ? "💗" : "💔"}</p>
       </div>
       <p class="bigger-title">Buyable units</p>
       <div>${this.buyableUnits.map((unit) => unit.render()).join("")}</div>
       <div>${this.player.render()}</div>
-      <button id="attack-btn" data-click="attack">Attack</button>
+      <div>${this.attackButton()}</div>
       </div>
     `;
   }

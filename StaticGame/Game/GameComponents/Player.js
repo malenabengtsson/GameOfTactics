@@ -100,7 +100,7 @@ export default class Player {
     let unitsThatSurvive = [];
     let firstAttack = this.whoGoesFirst(boss, this.unitList);
     if (firstAttack === "Boss") {
-      console.log('Boss goes first');
+      alert(`The boss start combat and strikes first! The boss does ${Math.round(boss.getStrength())} to your units.`)
       unitsThatSurvive = boss.doDamageToUnits(boss, this.unitList);
       if(unitsThatSurvive.length > 0){
         unitsThatSurvive.forEach((unit) => {
@@ -111,10 +111,10 @@ export default class Player {
         alert('You lost. No units are alive to fight!');
       }
     } else {
-      console.log('Unit goes first ');
-    this.unitList.forEach((unit) => {
-      totalDamageToBoss = unit.getStrengthComparedTo(boss, unit);
-    });
+      this.unitList.forEach((unit) => {
+        totalDamageToBoss = unit.getStrengthComparedTo(boss, unit);
+      });
+      alert(`Your units start combat and strikes first! Your units do ${totalDamageToBoss} damage to the boss.`)
   }
     return totalDamageToBoss;
   }

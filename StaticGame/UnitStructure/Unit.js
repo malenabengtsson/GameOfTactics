@@ -69,7 +69,7 @@ export default class Unit extends Base{
     <p class="unit-name">${this.constructor.name}</p>
     <p class="unit-attribute">${this.stars}⭐</p>
     <p class="unit-attribute">${this.healthPoints} health</p>
-    <p class="unit-attribute">${this.cost} gold</p>
+    <p class="unit-attribute">Cost: ${this.cost} gold</p>
     </div>
     `
   }

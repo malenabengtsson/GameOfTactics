@@ -60,6 +60,7 @@ export default class Game extends Base {
     }
     if (this.boss.healthPoints < 0) {
       this.boss.healthPoints = 0;
+      alert('The boss died. You won!')
     }
     this.render();
     this.newRound();

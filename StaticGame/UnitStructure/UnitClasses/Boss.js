@@ -14,9 +14,6 @@ export default class Boss extends Unit{
       if (didUnitSurvive > 0){
         unitSurvive.push(unit)
       }
-      else{
-        console.log('Unit died :(', unit.constructor.name);
-      }
     });
     return unitSurvive;
   }

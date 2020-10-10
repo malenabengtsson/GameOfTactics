@@ -393,7 +393,7 @@
 											"top": 441,
 											"width": 196.91064453125,
 											"height": 13,
-											"text": "+healthPoints",
+											"text": "+healthPoints: int",
 											"horizontalAlignment": 0
 										}
 									],
@@ -7397,7 +7397,7 @@
 								"$ref": "AAAAAAF0sEonX6lxkII="
 							},
 							"name": "healthPoints",
-							"type": ""
+							"type": "int"
 						}
 					],
 					"operations": [

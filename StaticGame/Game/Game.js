@@ -8,7 +8,6 @@ export default class Game extends Base {
   round = 0;
   player = new Player();
   boss = new Boss();
-  bossDied = false;
 
   constructor() {
     super();

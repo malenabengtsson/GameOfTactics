@@ -5,7 +5,7 @@ export default class Boss extends Unit{
   magicalDamage = Math.floor(Math.random() * 30) + 1
   physicalDefence = Math.floor(Math.random() * 25) + 1
   magicalDefence = Math.floor(Math.random() * 25) + 1
-  healthPoints = 500;
+  healthPoints = 1500;
 
   doDamageToUnits(boss, unitList){
     let unitSurvive = [];

@@ -100,7 +100,7 @@ export default class Player {
     let unitsThatSurvive = [];
     let firstAttack = this.whoGoesFirst(boss, this.unitList);
     if (firstAttack === "Boss") {
-      alert(`The boss start combat and strikes first! The boss does ${Math.round(boss.getStrength())} to your units.`)
+      alert(`The boss start combat and strikes first! The boss does ${Math.round(boss.getStrength())} damage to your units.`)
       unitsThatSurvive = boss.doDamageToUnits(boss, this.unitList);
       if(unitsThatSurvive.length > 0){
         unitsThatSurvive.forEach((unit) => {

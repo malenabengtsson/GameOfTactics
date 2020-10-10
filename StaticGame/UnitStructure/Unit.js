@@ -45,16 +45,6 @@ export default class Unit extends Base{
       unit.magicalDefence = unit.magicalDefence * 4.5;
       unit.healthPoints = unit.healthPoints * 4.5;
     }
-    else if (unit.stars === 2) {
-      unit.stars = 3
-      unit.physicalDamage = unit.physicalDamage * 6.5
-      unit.physicalDamage = unit.physicalDamage * 6.5
-      unit.magicalDamage = unit.magicalDamage * 6.5
-      unit.physicalDefence = unit.physicalDefence *6.5;
-      unit.magicalDefence = unit.magicalDefence * 6.5;
-      unit.healthPoints = unit.healthPoints * 6.5;
-    }
-    console.log(unit);
     return unit;
   }
 
